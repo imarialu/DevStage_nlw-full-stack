@@ -48,6 +48,16 @@ const showInvite = (userData) => {
     `
 }
 
+const saveUser = (userData) => {
+    const newUser = {
+        ...userData, // "Espalha" as informações de usuário (email, phone)
+        ref: Math.round(Math.random() = 4000), // Mostrará um numéro aleatório e já arredondado
+        refBy: 100
+    }
+
+    users.push(newUser) // Adicionará novo usuario ao users
+    return newUser
+}
 const formAction = () => {
     const form = document.getElementById("form") // Pegará o form pelo Id
     form.onsubmit = (event) => { // A função só será executada quando clicarem no botão
@@ -62,7 +72,8 @@ const formAction = () => {
         if(user){
             showInvite(user)
         }else{
-
+            const newUser = saveUser(userData)
+            showInvite(newUser)
         }
     }
 }
@@ -82,3 +93,5 @@ const startApp = () => {
 }
 
 startApp(); // Inicia a aplicação
+
+document.getElementById("logo").onclick = () => startApp()
