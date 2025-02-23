@@ -11,8 +11,10 @@ Insira o e-mail fictício: test@test.com, tust@tust.com ou tost@tost.com e o tel
 
 ## Tecnologias utilizadas
 
-- HTML
-- CSS
-- JavaScript
+- `HTML`
+- `CSS`
+- `JavaScript`
 
+## Certificado de participação
+- https://app.rocketseat.com.br/certificates/24c087d9-18ea-412f-afb7-a52d31d9fa1c
 
