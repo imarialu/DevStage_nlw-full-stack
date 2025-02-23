@@ -60,6 +60,7 @@ const showInvite = (userData) => {
    </section>
     `
 
+    app.setAttribute('class', 'page-invite')
     updateImageLinks()
 }
 
@@ -125,14 +126,14 @@ const startApp = () => {
 
                 <form id="form">
                     <div class="input-wrapper">
-                        <div id="input-group">
+                        <div class="input-group">
                             <label for="email">
-                                <img src="email.svg" alt="E-mail icon">
+                                <img src="mail.svg" alt="E-mail icon">
                             </label>
                             <input type="email" name="email" id="email" placeholder="E-mail">
                         </div>
 
-                        <div id="input-group">
+                        <div class="input-group">
                             <label for="phone">
                                 <img src="phone.svg" alt="Phone icon">
                             </label>
@@ -150,10 +151,11 @@ const startApp = () => {
     `
 
     app.innerHTML = content // app é igual a content, ou seja, a div receberá a estrutura HTML
+    app.setAttribute('class', 'page-start')
     updateImageLinks()
     formAction()
 }
 
 startApp(); // Inicia a aplicação
 
-document.getElementById("logo").onclick = () => startApp()
+document.querySelector("header").onclick = () => startApp()
